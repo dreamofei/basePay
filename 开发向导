@@ -1,0 +1,35 @@
+
+	1  创建Activity，继承BasePayActivity；
+	
+	2 创建Activity对应的支付页面Layout；
+		2.1 该layout中应包含选择支付方式（如RaidoButton），确认支付按钮等控件。
+			选择的支付方式必须赋值给Activity中的payType属性；
+			确认支付按钮的点击事件必须指定为方法Pay；
+			注：属性payType、方法Pay都已经在BasePayActivity中实现，开发者直接使用即可。
+	
+	3 重写onCreate，如：
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.布局文件);
+	}
+	在setContentView中指定为第2步创建的Layout。
+	
+	4 在页面初始化中调用方法RegisterBasePay（可在第3步onCreate中调用），传入支付相关参数信息。
+	
+	5 override（重写）方法OnOrderCreate，在该方法中调用方法BuildOrderInfo，传入订单相关参数信息，返回OrderInfo。
+	
+	6 回调实现：
+		支付宝：override方法Success、Warning、Error分别对应支付成功、正在等待支付结果、支付失败情况下的结果处理。
+		微信：创建包：项目基础包.wxapi；如：com.eland.basepay.component.wxapi。
+			在该包路径中实现WXPayEntryActivity类(包名或类名不一致会造成无法回调)，
+			在WXPayEntryActivity类中实现onResp函数，支付完成后，微信APP会返回到商户APP并回调onResp函数，
+			开发者需要在该函数中接收通知，判断返回错误码，如果支付成功则去后台查询支付结果再展示用户实际支付结果。注意一定不能以客户端返回
+			作为用户支付的结果，应以服务器端的接收的支付通知或查询API返回的结果为准。代码示例如下：
+			public void onResp(BaseResp resp) {
+				if (resp.getType() == ConstantsAPI.COMMAND_PAY_BY_WX) {
+					AlertDialog.Builder builder = new AlertDialog.Builder(this);
+					builder.setTitle("提示");
+					builder.setMessage("支付结果"+resp.errStr +";code=" + String.valueOf(resp.errCode));
+					builder.show();
+				}
+			}

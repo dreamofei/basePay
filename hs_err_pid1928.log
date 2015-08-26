@@ -1,0 +1,131 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:127), pid=1928, tid=7708
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version:  (8.0_45-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.45-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001d5e800):  JavaThread "Unknown thread" [_thread_in_vm, id=7708, stack(0x0000000002540000,0x0000000002640000)]
+
+Stack: [0x0000000002540000,0x0000000002640000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b57a]
+V  [jvm.dll+0x279873]
+V  [jvm.dll+0x27a509]
+V  [jvm.dll+0x2717a6]
+V  [jvm.dll+0x68183]
+V  [jvm.dll+0x68273]
+V  [jvm.dll+0x7d74a]
+V  [jvm.dll+0x7dab6]
+V  [jvm.dll+0xf2157]
+V  [jvm.dll+0xf24e6]
+V  [jvm.dll+0x20f097]
+V  [jvm.dll+0x240e0a]
+V  [jvm.dll+0x15ba41]
+C  [javaw.exe+0x217e]
+C  [javaw.exe+0xcd17]
+C  [javaw.exe+0xcdab]
+C  [kernel32.dll+0x1652d]
+C  [ntdll.dll+0x2c541]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000001d5e800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7708, stack(0x0000000002540000,0x0000000002640000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.030 loading class java/lang/CharSequence done
+Event: 0.030 loading class java/lang/String done
+Event: 0.030 loading class java/lang/Class
+Event: 0.030 loading class java/lang/reflect/AnnotatedElement
+Event: 0.030 loading class java/lang/reflect/AnnotatedElement done
+Event: 0.030 loading class java/lang/reflect/GenericDeclaration
+Event: 0.030 loading class java/lang/reflect/GenericDeclaration done
+Event: 0.030 loading class java/lang/reflect/Type
+Event: 0.030 loading class java/lang/reflect/Type done
+Event: 0.030 loading class java/lang/Class done
+
+
+Dynamic libraries:
+0x000000013f2d0000 - 0x000000013f307000 	C:\Program Files\Java\jre1.8.0_45\bin\javaw.exe
+0x00000000771a0000 - 0x0000000077349000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077080000 - 0x000000007719f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd0f0000 - 0x000007fefd15b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd9a0000 - 0x000007fefda7b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe560000 - 0x000007fefe5ff000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdcb0000 - 0x000007fefdccf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe350000 - 0x000007fefe47d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076f80000 - 0x000000007707a000 	C:\Windows\system32\USER32.dll
+0x000007fefd7d0000 - 0x000007fefd837000 	C:\Windows\system32\GDI32.dll
+0x000007fefdcd0000 - 0x000007fefdcde000 	C:\Windows\system32\LPK.dll
+0x000007fefdbe0000 - 0x000007fefdca9000 	C:\Windows\system32\USP10.dll
+0x000007fefb4d0000 - 0x000007fefb6c4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefddf0000 - 0x000007fefde61000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe490000 - 0x000007fefe4be000 	C:\Windows\system32\IMM32.DLL
+0x000007fefdce0000 - 0x000007fefdde9000 	C:\Windows\system32\MSCTF.dll
+0x0000000061200000 - 0x00000000612d2000 	C:\Program Files\Java\jre1.8.0_45\bin\msvcr100.dll
+0x000000005d870000 - 0x000000005e0f3000 	C:\Program Files\Java\jre1.8.0_45\bin\server\jvm.dll
+0x000007fef8a90000 - 0x000007fef8a99000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe300000 - 0x000007fefe34d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe480000 - 0x000007fefe488000 	C:\Windows\system32\NSI.dll
+0x000007fefb440000 - 0x000007fefb47b000 	C:\Windows\system32\WINMM.dll
+0x000007fefc0a0000 - 0x000007fefc0ac000 	C:\Windows\system32\VERSION.dll
+0x0000000077360000 - 0x0000000077367000 	C:\Windows\system32\PSAPI.DLL
+0x000000006f2a0000 - 0x000000006f2af000 	C:\Program Files\Java\jre1.8.0_45\bin\verify.dll
+0x000000006f270000 - 0x000000006f299000 	C:\Program Files\Java\jre1.8.0_45\bin\java.dll
+0x000000006f250000 - 0x000000006f266000 	C:\Program Files\Java\jre1.8.0_45\bin\zip.dll
+0x000007fee7490000 - 0x000007fee75b5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath:D:\Android\android-sdk\platforms\android-19\android.jar 
+java_command: com.eland.basepay.sample.ConsoleTest
+java_class_path (initial): D:\Android\workspace\basePay\bin\classes;D:\Android\workspace\basePay\libs\alipaySDK-20150610.jar;D:\Android\workspace\appcompat_v7\libs\android-support-v4.jar;D:\Android\workspace\basePay\libs\libammsdk.jar;D:\Android\workspace\appcompat_v7\libs\android-support-v7-appcompat.jar;D:\Android\workspace\appcompat_v7\bin\appcompat_v7.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_45/bin/server;C:/Program Files/Java/jre1.8.0_45/bin;C:/Program Files/Java/jre1.8.0_45/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\tool\apache-ant-1.9.5\bin;C:\tool\android-sdk-windows\platform-tools;C:\Program Files\nodejs;C:\Users\jiang.yafei\AppData\Roaming\npm;C:\tool\android-sdk-windows;C:\tool\android-sdk-windows\platforms;C:\tool\android-sdk-windows\tools;C:\Program Files\EPSON\OPOS for .NET\Lib64;C:\Program Files (x86)\Common Files\Adobe\AGL;;C:\Users\jiang.yafei\AppData\Local\Code\bin;D:\Android\eclipse;
+USERNAME=jiang.yafei
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.18015)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8291936k(4325896k free), swap 16582008k(11777808k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b15), built on Apr 30 2015 12:40:44 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Aug 11 14:11:45 2015
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
